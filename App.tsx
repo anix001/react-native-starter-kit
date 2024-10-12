@@ -1,22 +1,24 @@
+//rnfe
+import { View, SafeAreaView, ScrollView } from 'react-native';
 import React from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Button,
-  Alert,
-} from 'react-native';
+import FlatCard from './components/FlatCard';
+import ElevatedCard from './components/ElevatedCard';
+import FancyCard from './components/FancyCard';
+import ActionCard from './components/ActionCard';
 
-function App(){
-  return(
-   <SafeAreaView>
-      <View>
-        <Text>I am anix001. Trying to learn mobile development.</Text>
-        <Button title='Click me' onPress={()=> Alert.alert('Simply pressed the button')}/>
-      </View>
-   </SafeAreaView>
+const App = () => {
+  return (
+    <SafeAreaView>
+      <ScrollView>
+        <View>
+          <FlatCard/>
+          <ElevatedCard/>
+          <FancyCard/>
+          <ActionCard/>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
-}
+};
 
-
-export default App;
+export default App
